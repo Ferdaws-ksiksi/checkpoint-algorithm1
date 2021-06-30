@@ -1,0 +1,41 @@
+ALGORITHM checkpoint 1
+
+VAR
+ch:String;
+i:INTEGER:=0;
+count1:INTEGER:=0;
+count2:INTEGER:=1;
+count3:INTEGER:=0;
+
+BEGIN 
+
+FOR i FROM 1 to length(ch) DO 
+
+     IF (ch[i]!=' ') OR (ch[i]!='.') THEN
+
+        count1:=count1 + 1;
+   
+     END IF
+
+  
+    IF (ch[i]=' ') THEN
+    
+       count2:=count2+1;
+
+    END IF
+
+  
+    IF (ch[i]='a') or (ch[i]='e') or (ch[i]='i') or (ch[i]='o') or (ch[i]='u') or (ch[i]='y')
+     or (ch[i]='A') or (ch[i]='E') or (ch[i]='I')or (ch[i]='O')OR (ch[i]='U')OR (ch[i]='Y') THEN
+    
+       count3:=count3+1;
+
+    END IF
+
+END FOR
+
+Write("nombre des caracteres =", count1);
+Write("nombre des mots =", count2);
+Write("nombre des voyelles =", count3);
+
+END
